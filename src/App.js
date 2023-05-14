@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Content2 from './Content2';
 import { useState } from 'react';
+import AddItem from './AddItem';
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
       <header className="App-header">
         <Header title="To Do List" />
         {/* <Content /> */}
+        <AddItem />
         <Content2
           items={items}
           handleCheck={handleCheck}
