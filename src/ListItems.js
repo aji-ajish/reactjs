@@ -4,7 +4,7 @@ import LineItem from './LineItem';
 function ListItems({ items, handleCheck, handleDelete }) {
     return (
         <ul>
-            {items.map((item) => {
+            {items.map((item,index) => {
                 let text_style = item.checked === true ? 'line-through' : 'none';
                 let text_color = item.checked === true ? '#5658db' : '#56db77';
                 return (
@@ -13,6 +13,7 @@ function ListItems({ items, handleCheck, handleDelete }) {
                         text_color={text_color}
                         key={item.id}
                         item={item}
+                        number={index}
                         handleCheck={handleCheck}
                         handleDelete={handleDelete} />
                 )
